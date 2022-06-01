@@ -4,6 +4,7 @@ metadata:
   name: mylogin-svc
   labels:
     app: mylogin
+    version: 2.6.1
 spec:
    type: NodePort
    ports:
@@ -11,4 +12,5 @@ spec:
      nodePort: 30001
      protocol: TCP
    selector:
-      app: mylogin   
+      app: mylogin 
+      version: 2.6.1  
