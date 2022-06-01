@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: mynginx-rc
+  name: mylogin-rc
 spec:
   replicas: 4
   selector: 
-    app: mynginx
+    app: mylogin
   template:
     metadata:
        labels:
-          app: mynginx
+          app: mylogin
     spec:
       containers:
-      - name: mynginx-container
-        image: nginx
+      - name: mylogin-container
+        image:  maha4iac/myonlinebooking:1
         ports:
-         - containerPort: 80
+         - containerPort: 8080
         
